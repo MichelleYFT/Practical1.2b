@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
         mCount++;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+        if (mCount != 0)
+            findViewById(R.id.button_zero).setBackgroundColor(Color.RED);
+        if(mCount % 2 == 0)
+            findViewById(R.id.button_count).setBackgroundColor(Color.GREEN);
+        if(mCount % 2 == 1)
+            findViewById(R.id.button_count).setBackgroundColor(Color.YELLOW);
     }
 
     public void resetZero(View view)
