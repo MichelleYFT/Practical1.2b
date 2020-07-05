@@ -2,6 +2,7 @@ package com.example.com;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -29,5 +30,14 @@ public class MainActivity extends AppCompatActivity {
         mCount++;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+    }
+
+    public void resetZero(View view)
+    {
+        mCount = 0;
+        mShowCount.setText(Integer.toString(mCount));
+
+        if(mCount == 0)
+            view.setBackgroundColor(Color.GRAY);
     }
 }
